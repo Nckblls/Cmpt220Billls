@@ -16,11 +16,11 @@ public class Problem63{
     Scanner input = new Scanner(System.in);
     int number = input.nextInt();
     int revnum = reverse(number);
-	System.out.println("The number is "+ revnum + " reversed.");
+    System.out.println("The number is "+ revnum + " reversed.");
     System.out.println("Is the number a palindrome? " + palindrome(number));
   }
 
-
+  //Reverses the interger given
   public static int reverse(int number){
     int revnum = 0;
     int lastdigit;
@@ -34,7 +34,7 @@ public class Problem63{
     revnum = revnum + number;
     return revnum;
   }
-
+  //Checks to see if reversed interger is the same as the forward interger.
   public static boolean palindrome(int number){
     if ( reverse(number) == number){
     return true; 

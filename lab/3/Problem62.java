@@ -18,7 +18,7 @@ public class Problem62{
     System.out.println(total);
   }
   
-
+//Method sumdigits adds each digit of the given interger together in to an interger. 
   public static int sumDigits(long n){
     int sum = 0; 
     while ( n>10){

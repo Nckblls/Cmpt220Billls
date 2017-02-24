@@ -18,6 +18,7 @@ public class Problem51{
     int numbersnegative = 0;
     int numstotal = 0;
     double numsavg = 0;
+    //This checks if the interger is positive or negative.
     do {
        numberinput = input.nextInt();
       if (numberinput >0){
@@ -28,6 +29,7 @@ public class Problem51{
       }
       numstotal = numstotal + numberinput;
     } while(numberinput != 0);
+    //Tells the number of positive and negative values, the total, and the average. 
     System.out.println("The positive numbers are: " + numberspositive);
     System.out.println("The negative numbers are: " + numbersnegative);
     System.out.println("The total is: " + numstotal);

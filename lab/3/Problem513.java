@@ -13,13 +13,12 @@ import java.util.Scanner;
 public class Problem513{
   public static void main(String[] args){
     int number = 0;
-	int numbercubed = 0;
-	while (numbercubed < 12000){
+    int numbercubed = 0;
+    //increments until N cubed is greater than 12,000.
+    while (numbercubed < 12000){
       number++;
       numbercubed = number*number*number;
-	}
+    }
     System.out.println("The largest value of N is: " + number);
-	
-    
   }
 }

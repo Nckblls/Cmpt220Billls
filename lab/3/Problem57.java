@@ -15,19 +15,19 @@ public class Problem57{
   public static void main(String[] args){
     Scanner input = new Scanner(System.in);
     double tuition = 10000;
-	double cost = 0;
+    double cost = 0;
     for (int x = 0; x < 10; x++ ){
     double moneyadd = tuition * 0.05;
     tuition = tuition + moneyadd;
-	System.out.print(x);
+    System.out.print(x);
     }
-	double noincreasecost = tuition * 4;
-	for (int y = 0; y < 4; y++ ){
+    double noincreasecost = tuition * 4;
+    for (int y = 0; y < 4; y++ ){
       cost += tuition;
       double moneyadd = tuition * 0.05;
       tuition = tuition + moneyadd;
     }
     System.out.println("The price is " + cost + "for four years, with ever increasing prices.");
-	System.out.println("The price is " + noincreasecost + "for four years, with a stagnant price over the interim.");
+    System.out.println("The price is " + noincreasecost + "for four years, with a stagnant price over the interim.");
   }
 }

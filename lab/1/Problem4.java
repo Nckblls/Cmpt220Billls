@@ -15,14 +15,14 @@ public class Problem4 {
     Scanner input = new Scanner(System.in);
     System.out.println("Enter a number between 0 and 1000:");
     //Takes number in and seperates it into it's parts.
-	int number = input.nextInt();
-	int firstdigit = number % 10;
-	number = number / 10; 
-	int secondnumber = number % 10;
-	number = number/10;
-	int lastnumber = number % 10; 
-	//Sums the numbers and then outputs the sum. 
-	int sum = firstdigit + secondnumber + lastnumber;
-	System.out.println(" The sum is " + sum);
+    int number = input.nextInt();
+    int firstdigit = number % 10;
+    number = number / 10; 
+    int secondnumber = number % 10;
+    number = number/10;
+    int lastnumber = number % 10; 
+    //Sums the numbers and then outputs the sum. 
+    int sum = firstdigit + secondnumber + lastnumber;
+    System.out.println(" The sum is " + sum);
   } 
 }

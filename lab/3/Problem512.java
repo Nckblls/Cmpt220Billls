@@ -13,13 +13,13 @@ import java.util.Scanner;
 public class Problem512{
   public static void main(String[] args){
     int number = 0;
-	int numbersquared = 0;
-	while (numbersquared < 12000){
+    int numbersquared = 0;
+    //Increments until N squared is greater than 12,000.
+    while (numbersquared < 12000){
       number++;
       numbersquared = number*number;
-	}
+    }
     System.out.println("The smallest value of N is: " + number);
-	
     
   }
 }
