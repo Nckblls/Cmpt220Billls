@@ -4,6 +4,7 @@
    * course: CMPT 220
    * assignment: Lab 2
    * due date: February 23rd, 2017
+   * version: 1.2
    * 
    * 
    * Calculates the smallest N value that's square is less than 12,000.
@@ -14,7 +15,7 @@ public class Problem512{
   public static void main(String[] args){
     int number = 0;
     int numbersquared = 0;
-    //Increments until N squared is greater than 12,000.
+    //Increments until the number squared is greater than 12,000.
     while (numbersquared < 12000){
       number++;
       numbersquared = number*number;

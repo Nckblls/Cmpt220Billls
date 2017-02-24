@@ -4,6 +4,7 @@
    * course: CMPT 220
    * assignment: Lab 2
    * due date: February 8th, 2017
+   * version: 1.2
    * 
    * 
    * Takes a string value and determines the change

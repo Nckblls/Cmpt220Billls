@@ -1,9 +1,10 @@
-/**
+ /**
    * file: Problem34.java
    * author: Nicholas Bills
    * course: CMPT 220
    * assignment: Lab 2
    * due date: February 8th, 2017
+   * version: 1.2
    * 
    * 
    * Creates a random interger and tells the corresponding month. 

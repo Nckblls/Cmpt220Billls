@@ -1,9 +1,10 @@
-/**
+  /**
    * file: Problem63.java
    * author: Nicholas Bills
    * course: CMPT 220
    * assignment: Lab 2
    * due date: February 23rd, 2017
+   * version: 1.4 
    * 
    * 
    * Has the methods reverse, which reverses a series of intergers, 
@@ -20,7 +21,18 @@ public class Problem63{
     System.out.println("Is the number a palindrome? " + palindrome(number));
   }
 
-  //Reverses the interger given
+  
+  /**
+   * reverse
+   *
+   * This function reverses the order of the numbers
+   * in an interger given to it.
+   * 
+   * Parameters:
+   *   number: the number which will have the order of it's numbers reversed.
+   * 
+   * Return value: an interger in the reverse order of the original parameter.
+   */
   public static int reverse(int number){
     int revnum = 0;
     int lastdigit;
@@ -34,7 +46,17 @@ public class Problem63{
     revnum = revnum + number;
     return revnum;
   }
-  //Checks to see if reversed interger is the same as the forward interger.
+    /**
+   * Palindrome
+   *
+   * This function determines if the interger given to it is a palindrome, 
+   * meaning the same forward and backward. 
+   * 
+   * Parameters:
+   *   number: the number which will be chacked to see if it is a palindrome. 
+   * 
+   * Return value: a boolean telling true if it is a palindrome and false if it is not. 
+   */
   public static boolean palindrome(int number){
     if ( reverse(number) == number){
     return true; 

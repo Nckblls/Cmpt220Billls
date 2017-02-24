@@ -1,9 +1,10 @@
-/**
+ /**
    * file: Problem51.java
    * author: Nicholas Bills
    * course: CMPT 220
    * assignment: Lab 2
    * due date: February 23rd, 2017
+   * version: 1.3
    * 
    * 
    * Takes a series of numbers and decides how many are positive or negative. 

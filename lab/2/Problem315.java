@@ -4,6 +4,7 @@
    * course: CMPT 220
    * assignment: Lab 2
    * due date: February 8th, 2017
+   * version: 1.3
    * 
    * 
    * Takes a letter and gives the corresponding number
