@@ -1,3 +1,14 @@
+/**
+   * file: Problem11.java
+   * author: Nicholas Bills
+   * course: CMPT 220
+   * assignment: Lab 2
+   * due date: February 8th, 2017
+   * 
+   * 
+   * Output the value of the doubles in the program. 
+   * 
+   */
 public class Problem1{ 
 public static void main(String[] args) { 
 double i = 50.0;

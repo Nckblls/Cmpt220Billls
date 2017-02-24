@@ -15,9 +15,9 @@ public class Problem3{
     Scanner input = new Scanner(System.in);
     System.out.println("Enter the subtotal and gratuity rate:");
     Double subtotal = input.nextDouble();
-	Double gratuityrate = input.nextDouble();
-	Double gratuity = subtotal * (gratuityrate/100);
-	Double totalprice = subtotal + gratuity;
-	System.out.println(" The gratuity is $" + gratuity + " making the total $"+ totalprice + ".");
+    Double gratuityrate = input.nextDouble();
+    Double gratuity = subtotal * (gratuityrate/100);
+    Double totalprice = subtotal + gratuity;
+    System.out.println(" The gratuity is $" + gratuity + " making the total $"+ totalprice + ".");
   } 
 }

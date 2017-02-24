@@ -28,7 +28,6 @@ public class Problem410{
     System.out.print("\nEnter 0 for No and 1 for Yes: ");
     String response = input.next();
     char answer;
-
     answer = response.charAt(0);
   
     if (answer == 'Y'){

@@ -16,6 +16,7 @@ public class Problem311{
     System.out.println("Enter a month and a year:");
     int month = input.nextInt();
     int year = input.nextInt();
+    //Outputs the days in the month.
     switch (month % 12){
       case 0: System.out.println("December of " + year + " had 31 days."); break;  
       case 1: System.out.println("January of " + year + " had 31 days."); break; 
