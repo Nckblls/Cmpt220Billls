@@ -1,13 +1,13 @@
 /**
-   * file: Project731.java
+   * file: Project730.java
    * author: Nicholas Bills
    * course: CMPT 220
    * assignment: lab 5
    * due date: March 30, 2017
+   *
    * 
    * 
-   * 
-   * This file uses a pivot sort on the first value of an array. 
+   * This file combines two arrays in a sorted manner 
    */
 
 
@@ -15,103 +15,95 @@ import java.util.Scanner;
 public class Problem731 {
   public static void main(String[] args){
     Scanner input = new Scanner(System.in);
-    System.out.println("Enter array size:");
-    int size = input.nextInt();
-    int[] array = new int[size];
-    System.out.println("Please enter " + size + " value(s) for array one:");
-    for (int x = 0; x < size; x++){
+    System.out.println("Please enter size of array 1 and 2:");
+    int size1 = input.nextInt();
+    int[] arrone = new int[size1];
+    int size2 = input.nextInt();
+
+    int[] arrtwo = new int[size2];
+    
+    
+    
+    System.out.println("Please enter " + size1 + " value(s) for array one:");  
+    
+    
+    for (int x = 0; x < size1; x++){
       int arrayvalue = input.nextInt();
-      array[x] = arrayvalue;
+      arrone[x] = arrayvalue;
     }
-    //Sends the array to selectionSort
-    partition(array);
-    for (int s = 0 ; s < array.length ; s++){
-      System.out.print(Math.round(array[s]) + " ");
+    System.out.println("Please enter " + size2 + " value(s) for array two:");
+    
+    
+    for (int t = 0; t < size2; t++){
+      int arayval = input.nextInt();
+      arrtwo[t] = arayval;
     }
+   
+    int[] mergedlist = merge(arrone,arrtwo);
+    for (int s = 0 ; s < mergedlist.length ; s++){
+      System.out.print(mergedlist[s] + " ");
+    }
+    
     
   }
 
   /**
-   * partition
+   * merge
    *
-   * This function sorts the array in one iteration of a pivot sort. 
+   * This function sorts two arrays while combining them. 
    *  
    * 
    * Parameters:
-   *   list: is the array to be sorted
+   *   list1: is the array to be combined
+   *   list2: second array to be combined
    * 
-   * Return value: the postition of the pivot value in the new array
+   * Return value: an array which is a sorted combination of the first two. 
    */
-  
-  
-  public static int partition(int[] list){
-    int pivval = list[0];
-    int position = 0;    
-    int index = 1;
-    int end = list.length-1;
-    boolean outoforder = true; 
-    int isover = 0;
-    int reruns = 0;
-    int numbersless = 0; 
-    
-    boolean forwards = true;
-    
-    
-    while (forwards){
-        numbersless = 0;
-        while(forwards){
-          if(list[index] <= pivval && index > position){
-            int newval = list[index];
-            list[index] = pivval;
-            list[position] = newval;
-            position = index;
-            forwards = false;
-          }
-          index++;
-          //Add if it reaches the end it increments anyway and adds to reruns to stop a loop
-          if (index == end){
-            forwards = false;
-            reruns++;
-          }
-        }
-        while (!forwards){
-          if (list[index] > pivval && index < position){
-              int newval = list[index];
-              list[index] = pivval;
-              list[position] = newval;
-              position = index;
-              forwards = true;
-          }
-          index--;
-          if (index == 0){
-            forwards = true;
-            reruns++;
-          }
-        }
-        for (int x = 0; x < list.length; x++){
-          
-          if (list[x] < pivval){
-          numbersless++;
-          }
-          
-          System.out.println(numbersless);
-          System.out.println(position);
-        }
+
+  public static int[] merge(int[] list1, int[] list2) {
+    int[] mergedlist = new int[list1.length + list2.length];
+    int pos1=0;
+    int pos2=0;
+    int position = 0;
+    //Goes through the arrays and sorts their values into new array 
+    //quits if either array reaches the end. 
+    for (int y = 0; y < mergedlist.length && pos1 < list1.length && pos2 < list2.length; y++){
+      //if list1 val is less than list2val adds that value in
+      position++;
+      if (list1[pos1] <= list2[pos2]){
         
-          if (numbersless == (position+1))
-              forwards = false; 
-          if (numbersless == 0)
-              forwards = false; 
-          
+        mergedlist[y] = list1[pos1];
+        pos1++;
         
-        
-        
-        
-        
-        
-        
+      }
+      else {
+        //if not adds list2val to merged list
+        mergedlist[y] = list2[pos2];
+        pos2++;
+       
+      }
     }
-    return 1; 
+    //once one of the lengths reaches their end the for loop quits
+    // if pos1 has reached length then this 
+    if (pos1 == list1.length ){
+      for (int d = position; d < mergedlist.length; d++){
+        mergedlist[d] = list2[pos2];
+        pos2++;
+             
+      }
+          
+    }
+    // if pos2 runs out of values the rest of merged list comes from here
+    else if (pos2== list2.length){
+      for (int g = position; g < mergedlist.length ; g++){
+        mergedlist[g] = list1[pos1];
+        pos1++;
+               
+              
+      }
+          
+    }
+    
+  return mergedlist;
   }
-  
 }
