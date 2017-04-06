@@ -48,17 +48,10 @@ public class Problem732 {
     int pivval = list[0];
     int position = 0;    
     int index = position + 1;
-    int end = list.length-1;
     int index2 = list.length-1;
-    boolean outoforder = true; 
-    int isover = 0;
-    int reruns = 0;
-    int numbersless = 0; 
-    
-    boolean forwards = true;
     
     
-    while (outoforder){
+    while (index2 > index){
       while(list[index] <= pivval && index <= index2){
         index++;
       }
@@ -81,11 +74,9 @@ public class Problem732 {
       list[index2] = pivval;
       list[position] = newval;
       position = index2;
-      outoforder = false;
+    
     }
-    else if(index2==position){
-      outoforder = false;
-    }        
+
   return position; 
   }
 }
