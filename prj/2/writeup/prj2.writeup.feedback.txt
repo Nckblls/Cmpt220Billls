@@ -1,0 +1,12 @@
+19 pts
+
+The project attempts to help with memorization.
+The idea has good merit. 
+
+However, there are some issues...
+Code:
+- There is incorrect indentation. -1pt
+
+Overall:
+- Project is not complete. -20pts
+
